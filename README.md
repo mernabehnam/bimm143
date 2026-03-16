@@ -6,7 +6,7 @@ This is my class portfolio for [**BIMM 143: Bioinformatics**](https://bioboot.gi
 
 Class 04: Bioinformatics Data Analysis with R
 
-[Class 05: Data Exploration and Visualization in R](class05/class05.md)
+[Class 05: Data Exploration and Visualization in R](class05/class05.html)
 
 Class 06: R functions and R Packages from CRAN and BioConductor
 
