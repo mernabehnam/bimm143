@@ -1,0 +1,92 @@
+---
+title: "Class 19: Cancer Mutation Project"
+author: "Merna Behnam (PID: A17675170)"
+format: html
+---
+
+I downloaded my sequence from the class website and moved it to my working directory:
+
+From a **BLASTp** search against human refseq I see that it is
+
+- Official Symbol: TP53
+- Official Full Name: cellular tumor antigen p53 isoform a
+
+```{r}
+library (bio3d)
+
+a <- read.fasta("A17675170_mutant_seq.fa")
+a
+```
+
+
+
+We could score residue conservation then find the non 1.0 scoring positins. These will be the mutation positions:
+
+```{r}
+conserv(a)
+```
+
+```{r}
+mutation.sites <- which(conserv(a)<1)
+```
+
+```{r}
+paste( a$ali[1, mutation.sites],
+       mutation.sites,
+       a$ali[2, mutation.sites],sep=""
+)
+```
+
+Domains from hmmer search
+
+![] (hmmer_domains.png)
+
+PFAM: 
+Description:
+Coordinates:
+
+
+only healthy wt:
+```{r}
+wt <- a$ali["wt_healthy", ]
+wt_seq <- paste(wt, collapse = "")
+wt_seq
+```
+
+```{r}
+hits <- blast.pdb(wt)
+
+hits$hit.tbl[1:10, ]
+```
+
+```{r}
+rownames(a$ali)
+```
+
+only tumor:
+```{r}
+mt <- a$ali["mutant_tumor", ]
+mt_seq <- paste(mt, collapse = "")
+mt_seq
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

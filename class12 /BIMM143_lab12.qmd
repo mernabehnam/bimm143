@@ -1,0 +1,103 @@
+---
+title: "Class 12: Introduction to Genome Informatics Lab"
+author: "Merna Behnam (PID: A17675170)"
+format: pdf
+---
+
+## Section 1: Identify Genetic Variants of Interest
+
+> Q1: What are those 4 candidate SNPs?
+
+Based on my OMIM search, rs12936231, rs8067378, rs9303277, and rs7216389 are the 4 candidate SNPs.
+
+> Q2: What three genes do these variants overlap or effect?
+
+ZPBP2, GSDMB, ORMDL3.
+
+> Q3: What is the location of rs8067378 and what are the different alleles for rs8067378?
+
+Location: Chromosome 17:39895095 (forward strand)
+Alleles: A/C/G 
+  Ancestral: G
+  Highest population MAF: 0.50
+  
+> Q4: Name at least 3 downstream genes for rs8067378? 
+
+3 genes downstream of ZPBP2 are GSDMB, ORMDL3, and LRRC3C.
+
+> Q5: What proportion of the Mexican Ancestry in Los Angeles sample population (MXL) are
+homozygous for the asthma associated SNP (G|G)?
+
+Downloaded a CSV file from Ensemble < https://useast.ensembl.org/Homo_sapiens/Variation/Sample?db=core;r=17:39840099-39950100;v=rs8067378;vdb=variation;vf=959672880#373531_tablePanel >
+
+Here we read this CSV file
+
+```{r}
+mxl <- read.csv("373531-SampleGenotypes-Homo_sapiens_Variation_Sample_rs8067378.csv")
+head(mxl)
+```
+
+```{r}
+table(mxl$Genotype..forward.strand.)
+```
+
+```{r}
+table(mxl$Genotype..forward.strand.) / nrow(mxl) * 100
+```
+
+~14% of the Mexican Ancestry in Los Angeles sample population are homozygous for the asthma associated SNP. 
+
+Now, let's look at a different population. Proffessor Grant picked GBR!
+
+```{r}
+gbr <- read.csv("373522-SampleGenotypes-Homo_sapiens_Variation_Sample_rs8067378.csv")
+```
+
+Find proportion of G|G.
+
+```{r}
+round(table(gbr$Genotype..forward.strand.) / nrow(gbr) * 100, 2)
+```
+
+~30% of the British in England and Scotland population is homozygous for the asthma associated SNP.
+
+This variant that is associated with childhood asthma is more frequent in the GBR population than the MXL population. 
+
+Let's now dig into this further!
+
+> Q6. Back on the ENSEMBLE page, use the “search for a sample” field above to find the
+particular sample HG00109. This is a male from the GBR population group. What is the
+genotype for this sample?
+
+The genotype for this sample is G|G.
+
+
+## Section 2: Initial RNA-Seq analysis
+
+> Q7: How many sequences are there in the first file? What is the file size and format of the data? Make sure the format is fastqsanger here!
+
+There are 3,863 sequences in the first file. The file size is 757 KB and the data is in a fastqsanger format.
+
+> Q8: What is the GC content and sequence length of the second fastq file?
+
+The second data set has a GC content of 54%, and a 50-75 sequence length. 
+
+> Q9: How about per base sequence quality? Does any base have a mean quality score below
+20?
+
+The per base sequence quality score for the second fastq file is high, with all averaging in the green (above 28). None of the bases of a mean quality score below 20.
+
+
+## Section 3: Mapping RNA-Seq reads to genome
+
+> Q10: Where are most the accepted hits located?
+
+The most accepted hits were located on the gene PSMD3.
+
+> Q11: Following Q10, is there any interesting gene around that area?
+
+A gene around the PSMD3 area that I personally find interesting is ORMDL3. This gene also had a significant around of accepted hits more upstream of PSMD3.
+
+> Q12: Cufflinks again produces multiple output files that you can inspect from your right-handside galaxy history. From the “gene expression” output, what is the FPKM for the ORMDL3 gene? What are the other genes with above zero FPKM values?
+
+The FPKM for ORMDL3 gene is 136853. Other genes with an FPKM above zero include ZPBP2, GSDMA, GSDMB, and PSMD3. 

@@ -1,0 +1,34 @@
+2026-02-10 19:59:05,629 Running on GPU
+2026-02-10 19:59:05,968 Found 5 citations for tools or databases
+2026-02-10 19:59:05,968 Query 1/1: hivpr_23119 (length 198)
+2026-02-10 19:59:07,789 Setting max_seq=508, max_extra_seq=1540
+2026-02-10 20:00:07,921 alphafold2_multimer_v3_model_1_seed_000 recycle=0 pLDDT=84.8 pTM=0.786 ipTM=0.694
+2026-02-10 20:00:55,563 alphafold2_multimer_v3_model_1_seed_000 recycle=1 pLDDT=95.4 pTM=0.9 ipTM=0.885 tol=0.891
+2026-02-10 20:01:08,561 alphafold2_multimer_v3_model_1_seed_000 recycle=2 pLDDT=95.8 pTM=0.906 ipTM=0.895 tol=0.164
+2026-02-10 20:01:08,562 alphafold2_multimer_v3_model_1_seed_000 took 113.5s (2 recycles)
+2026-02-10 20:01:21,910 alphafold2_multimer_v3_model_2_seed_000 recycle=0 pLDDT=66.8 pTM=0.666 ipTM=0.498
+2026-02-10 20:01:35,286 alphafold2_multimer_v3_model_2_seed_000 recycle=1 pLDDT=74.8 pTM=0.546 ipTM=0.262 tol=2.58
+2026-02-10 20:01:48,831 alphafold2_multimer_v3_model_2_seed_000 recycle=2 pLDDT=74 pTM=0.526 ipTM=0.228 tol=0.532
+2026-02-10 20:02:02,595 alphafold2_multimer_v3_model_2_seed_000 recycle=3 pLDDT=75.8 pTM=0.54 ipTM=0.247 tol=0.773
+2026-02-10 20:02:02,596 alphafold2_multimer_v3_model_2_seed_000 took 53.9s (3 recycles)
+2026-02-10 20:02:16,609 alphafold2_multimer_v3_model_3_seed_000 recycle=0 pLDDT=70.4 pTM=0.654 ipTM=0.471
+2026-02-10 20:02:30,303 alphafold2_multimer_v3_model_3_seed_000 recycle=1 pLDDT=72.8 pTM=0.487 ipTM=0.148 tol=2.08
+2026-02-10 20:02:43,879 alphafold2_multimer_v3_model_3_seed_000 recycle=2 pLDDT=73.6 pTM=0.517 ipTM=0.208 tol=3.17
+2026-02-10 20:02:57,406 alphafold2_multimer_v3_model_3_seed_000 recycle=3 pLDDT=72.6 pTM=0.496 ipTM=0.173 tol=1.2
+2026-02-10 20:02:57,406 alphafold2_multimer_v3_model_3_seed_000 took 54.6s (3 recycles)
+2026-02-10 20:03:11,138 alphafold2_multimer_v3_model_4_seed_000 recycle=0 pLDDT=87.7 pTM=0.807 ipTM=0.731
+2026-02-10 20:03:24,799 alphafold2_multimer_v3_model_4_seed_000 recycle=1 pLDDT=95.4 pTM=0.904 ipTM=0.885 tol=0.55
+2026-02-10 20:03:38,568 alphafold2_multimer_v3_model_4_seed_000 recycle=2 pLDDT=96.3 pTM=0.911 ipTM=0.896 tol=0.149
+2026-02-10 20:03:38,569 alphafold2_multimer_v3_model_4_seed_000 took 41.0s (2 recycles)
+2026-02-10 20:03:52,497 alphafold2_multimer_v3_model_5_seed_000 recycle=0 pLDDT=76.6 pTM=0.597 ipTM=0.352
+2026-02-10 20:04:06,103 alphafold2_multimer_v3_model_5_seed_000 recycle=1 pLDDT=88.5 pTM=0.843 ipTM=0.807 tol=3.48
+2026-02-10 20:04:19,689 alphafold2_multimer_v3_model_5_seed_000 recycle=2 pLDDT=86.9 pTM=0.815 ipTM=0.759 tol=0.835
+2026-02-10 20:04:33,333 alphafold2_multimer_v3_model_5_seed_000 recycle=3 pLDDT=94.4 pTM=0.901 ipTM=0.88 tol=0.542
+2026-02-10 20:04:33,334 alphafold2_multimer_v3_model_5_seed_000 took 54.5s (3 recycles)
+2026-02-10 20:04:33,489 reranking models by 'multimer' metric
+2026-02-10 20:04:33,489 rank_001_alphafold2_multimer_v3_model_4_seed_000 pLDDT=96.3 pTM=0.911 ipTM=0.896
+2026-02-10 20:04:33,489 rank_002_alphafold2_multimer_v3_model_1_seed_000 pLDDT=95.8 pTM=0.906 ipTM=0.895
+2026-02-10 20:04:33,490 rank_003_alphafold2_multimer_v3_model_5_seed_000 pLDDT=94.4 pTM=0.901 ipTM=0.88
+2026-02-10 20:04:33,490 rank_004_alphafold2_multimer_v3_model_2_seed_000 pLDDT=75.8 pTM=0.54 ipTM=0.247
+2026-02-10 20:04:33,490 rank_005_alphafold2_multimer_v3_model_3_seed_000 pLDDT=72.6 pTM=0.496 ipTM=0.173
+2026-02-10 20:04:34,599 Done
