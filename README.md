@@ -26,7 +26,7 @@ Class 13: [Transcriptomics and the Analysis of RNA-Seq Data](class13/)
 
 Class 14: [RNA-Seq Analysis Mini-Project](class14/)
 
-Class 15: [Git and GitHub](class15/)
+Class 15: [Git and GitHub]
 
 Class 16: [Essential UNIX for Bioinformatics](class16/)
 
